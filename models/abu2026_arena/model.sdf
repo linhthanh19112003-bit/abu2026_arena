@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<sdf version="1.6">
+
+  <model name="abu2026_arena">
+    <static>true</static>
+
+    <!-- ========== NỀN SÂN ========== -->
+    <link name="san_bong">
+      <visual name="san_bong_visual">
+        <geometry>
+          <mesh>
+            <uri>model://abu2026_arena/meshes/sanbong.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+
+      <!-- collision đơn giản -->
+      <collision name="san_collision">
+        <geometry>
+          <box>
+            <!-- chỉnh đúng kích thước thực tế sân -->
+            <size>6 6 0.05</size>
+          </box>
+        </geometry>
+      </collision>
+    </link>
+  </model>
+
+</sdf>
