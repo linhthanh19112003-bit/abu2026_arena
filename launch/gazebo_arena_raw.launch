@@ -1,0 +1,13 @@
+<launch>
+  <!-- Cho Gazebo biết đường dẫn models trong package -->
+  <env name="GAZEBO_MODEL_PATH" value="$(find abu2026_arena)/models:$(optenv GAZEBO_MODEL_PATH)" />
+
+  <!-- Mở Gazebo -->
+  <include file="$(find gazebo_ros)/launch/empty_world.launch"/>
+  
+  <node name="spawn_arena" pkg="gazebo_ros" type="spawn_model"
+      args="-sdf -model abu2026_arena -file $(find abu2026_arena)/models/abu2026_arena/model_raw.sdf" />
+
+  
+</launch>
+
